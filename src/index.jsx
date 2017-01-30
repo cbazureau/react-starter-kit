@@ -3,11 +3,11 @@ import { Provider } from 'react-redux'
 import { render } from 'react-dom'
 import { createStore, combineReducers } from 'redux'
 import Router from './router'
-import configurations from './reducers/configurations'
+import subscription from './reducers/subscription'
 import './main.scss'
 
 const store = createStore(combineReducers({
-  configurations
+  subscription
 }))
 
 render(

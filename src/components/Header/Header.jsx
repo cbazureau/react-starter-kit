@@ -11,7 +11,3 @@ export default function Header() {
     </header>
   )
 }
-
-Header.propTypes = {
-  app: React.PropTypes.string.isRequired
-}

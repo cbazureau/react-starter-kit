@@ -1,19 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getAllConfigurations, selectConfiguration, updateConfiguration, deleteConfiguration, dispatchErrorMessage } from '../../actions/configurations'
+import { getOffers } from '../../actions/subscription'
 
 class App extends React.Component {
 
+  onClickSubscription() {
+    return getOffers(this.props.dispatch)
+  }
+
   render() {
     return (
-      <div>Test</div>
+      <button onClick={() => this.onClickSubscription()}>Subscribe</button>
     )
   }
 }
 
 function mapStateToProps(state) {
   return {
-    configurations: state.configurations
+    subscription: state.subscription
   }
 }
 
