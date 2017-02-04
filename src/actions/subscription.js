@@ -11,19 +11,19 @@ export function getOffers(dispatch) {
     method: 'POST'
   })
     .then(
-      data => dispatch({
+      data => data.json().then(json => dispatch({
         type: GET_OFFERS,
-        offers: data.json()
-      }))
+        offers: json.data
+      })))
     .catch(error => dispatch({
       type: ERR_CONFIG,
       message: error
     }))
 }
 
-export function chooseOffer(dispatch, offerId) {
+export function chooseOffer(dispatch, offer) {
   dispatch({
     type: CHOOSE_OFFER,
-    offerId
+    offer
   })
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-import App from './components/App/App'
+import Home from './components/Home/Home'
 import Header from './components/Header/Header'
 
 export default (
@@ -8,7 +8,7 @@ export default (
     <Header />
     <Router history={hashHistory}>
       <Route path="/">
-        <IndexRoute component={App} />
+        <IndexRoute component={Home} />
       </Route>
     </Router>
   </div>
