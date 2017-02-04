@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getOffers, chooseOffer } from '../../actions/subscription'
+import { getOffers, chooseOffer, stepBack } from '../../actions/subscription'
 
 class Home extends React.Component {
 
@@ -8,29 +8,38 @@ class Home extends React.Component {
     return getOffers(this.props.dispatch)
   }
 
-  onClickOffer(offerCode) {
+  onClickOffer(id) {
     return chooseOffer(this.props.dispatch, this.props.offers.find(
-      offer => offer.offerCode === offerCode
+      offer => offer.id === id
     ))
   }
 
+  onBack() {
+    return stepBack(this.props.dispatch)
+  }
+
   render() {
-    const offers = this.props.offers.map(offer => (
-      <li key={offer.offerCode}><a href="#" onClick={() => this.onClickOffer(offer.offerCode)}>{offer.label}</a></li>
-    ))
-
-    const showOfferButton = this.props.step === 'HOME' && <button onClick={() => this.onClickSubscription()}>View Offers</button>
-
-    const offersList = this.props.step === 'CHOICE' && <ul>{offers}</ul>
-
-    const offer = (this.props.step === 'RECAP' && this.props.selectOffer) && <p>{this.props.selectOffer.label}</p>
-
     return (
       <div className="container">
-        <h1>Discover our offers</h1>
-        {showOfferButton}
-        {offersList}
-        {offer}
+        <If condition={this.props.step !== 'HOME'}>
+          <button className="button-back" onClick={() => this.onBack()}>Return</button>
+        </If>
+        <Choose>
+          <When condition={this.props.step === 'CHOICE'}>
+            <h1>Choose your offer</h1>
+            <For each="offer" of={this.props.offers}>
+              <button key={offer.id} onClick={() => this.onClickOffer(offer.id)}>{offer.label}</button>
+            </For>
+          </When>
+          <When condition={this.props.step === 'RECAP' && this.props.selectOffer}>
+            <h1>Summary</h1>
+            <div><h2>{this.props.selectOffer.label}</h2><p>{this.props.selectOffer.desc}</p></div>
+          </When>
+          <Otherwise>
+            <h1>Discover our offers</h1>
+            <button onClick={() => this.onClickSubscription()}>View Offers</button>
+          </Otherwise>
+        </Choose>
       </div>
     )
   }
@@ -47,12 +56,13 @@ function mapStateToProps(state) {
 Home.propTypes = {
   dispatch: React.PropTypes.func.isRequired,
   step: React.PropTypes.string.isRequired,
-  selectOffer: React.PropTypes.objectOf(React.PropTypes.shape({
-    offerCode: React.PropTypes.string.isRequired,
-    label: React.PropTypes.string.isRequired
-  })),
+  selectOffer: React.PropTypes.shape({
+    id: React.PropTypes.string.isRequired,
+    label: React.PropTypes.string.isRequired,
+    desc: React.PropTypes.string.isRequired
+  }),
   offers: React.PropTypes.arrayOf(React.PropTypes.shape({
-    offerCode: React.PropTypes.string.isRequired,
+    id: React.PropTypes.string.isRequired,
     label: React.PropTypes.string.isRequired
   }))
 }

@@ -1,4 +1,4 @@
-import { GET_OFFERS, CHOOSE_OFFER } from '../actions/subscription'
+import { GET_OFFERS, CHOOSE_OFFER, STEP_BACK } from '../actions/subscription'
 
 const defaultState = {
   step: 'HOME',
@@ -9,8 +9,7 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   const nextState = Object.assign({}, state)
-  console.info('Action :' + action.type)
-  console.info(action)
+  console.info('Action', action.type)
   switch (action.type) {
     case GET_OFFERS:
       if (action.offers) {
@@ -24,9 +23,20 @@ export default (state = defaultState, action) => {
         nextState.step = 'RECAP'
       }
       break
+    case STEP_BACK:
+      if (state.step === 'RECAP') {
+        nextState.step = 'CHOICE'
+        nextState.selectOffer = null
+      }
+      if (state.step === 'CHOICE') {
+        nextState.step = 'HOME'
+        nextState.selectOffer = null
+        nextState.offers = []
+      }
+      break
     default:
       break
   }
-  console.log(nextState)
+  console.log('nextState', nextState)
   return nextState
 }

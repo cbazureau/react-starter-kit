@@ -1,18 +1,21 @@
 {
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "extends": "airbnb",
-  "rules": {
-    "semi": [
-      "error",
-      "never"
+    "parser": "babel-eslint",
+    "plugins": [
+        "jsx-control-statements"
     ],
-    "comma-dangle": [
-      "error",
-      "never"
-    ]
-  }
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
+    "rules": {
+        "semi": [
+            "error",
+            "never"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ]
+    }
 }

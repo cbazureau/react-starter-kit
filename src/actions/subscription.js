@@ -3,12 +3,13 @@ import 'whatwg-fetch'
 export const GET_OFFERS = 'GET_OFFERS'
 export const CHOOSE_OFFER = 'CHOOSE_OFFER'
 export const ERR_CONFIG = 'ERR_CONFIG'
+export const STEP_BACK = 'STEP_BACK'
 
-export const API_CONFIG = 'http://localhost:3003'
+export const API_CONFIG = 'http://localhost:8080/fake-api'
 
 export function getOffers(dispatch) {
-  fetch(`${API_CONFIG}/v1/RECO/offers/next`, {
-    method: 'POST'
+  fetch(`${API_CONFIG}/offers.json`, {
+    method: 'GET'
   })
     .then(
       data => data.json().then(json => dispatch({
@@ -27,3 +28,10 @@ export function chooseOffer(dispatch, offer) {
     offer
   })
 }
+
+export function stepBack(dispatch) {
+  dispatch({
+    type: STEP_BACK
+  })
+}
+
