@@ -15,6 +15,39 @@ header {
     background-size: 6rem 6rem;
 
   }
+  ul {
+    margin: 1.2rem 0 0 1.5rem;
+    padding: 0;
+    width: 24rem;
+    float:left;
+    li {
+      display: inline-block;
+      margin: 0rem 0 0 0rem;
+      &:first-child a {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+      &:last-child a {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+      a {
+        color: $white-forit;
+        display: inline-block;
+        padding: 1rem 1.3rem;
+        background-color: $green-arrow;
+        &:last-of-type() {
+          border-radius: 0.5rem;
+        }
+        border-left:1px solid $dark-knight;
+        &:hover {
+          background-color: $grey-anatomy;
+          color: $white-forit;
+        }
+        &.active {
+          background-color: $grey-shade;
+        }
+      }
+    }
+  }
   .secure {
     float: right;
     color: $white-spirit;
@@ -45,6 +78,13 @@ header {
     .logo {
       margin-top: 1rem;
       margin-left: 1rem;
+    }
+    ul {
+      width: 28rem;
+      margin: 2rem 0 0 3rem;
+      li a {
+        padding: 1rem 2rem;
+      }
     }
     .secure {
       margin-top: 2rem;

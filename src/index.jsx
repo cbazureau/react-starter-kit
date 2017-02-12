@@ -6,9 +6,13 @@ import Router from './router'
 import subscription from './reducers/subscription'
 import './main.scss'
 
+/* eslint-disable no-underscore-dangle */
 const store = createStore(combineReducers({
   subscription
-}))
+}),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+/* eslint-enable */
 
 render(
   <Provider store={store}>

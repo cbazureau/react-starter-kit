@@ -8,7 +8,7 @@ export const STEP_BACK = 'STEP_BACK'
 export const API_CONFIG = 'http://localhost:8080/fake-api'
 
 export function getOffers(dispatch) {
-  fetch(`${API_CONFIG}/offers.json`, {
+  return fetch(`${API_CONFIG}/offers.json`, {
     method: 'GET'
   })
     .then(
