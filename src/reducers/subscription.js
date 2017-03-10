@@ -9,7 +9,7 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   const nextState = Object.assign({}, state)
-  console.info('Action', action.type)
+  // console.info('Action', action.type)
   switch (action.type) {
     case GET_OFFERS:
       if (action.offers) {
@@ -37,6 +37,6 @@ export default (state = defaultState, action) => {
     default:
       break
   }
-  console.log('nextState', nextState)
+  // console.log('nextState', nextState)
   return nextState
 }

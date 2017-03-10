@@ -1,21 +1,29 @@
 {
-    "parser": "babel-eslint",
-    "plugins": [
-        "jsx-control-statements"
+  "parser": "babel-eslint",
+  "plugins": [
+    "jsx-control-statements",
+    "jest"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:jsx-control-statements/recommended"
+  ],
+  "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "semi": [
+      "error",
+      "never"
     ],
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
-    "rules": {
-        "semi": [
-            "error",
-            "never"
-        ],
-        "comma-dangle": [
-            "error",
-            "never"
-        ]
-    }
+    "comma-dangle": [
+      "error",
+      "never"
+    ]
+  }
 }
