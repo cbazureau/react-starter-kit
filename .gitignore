@@ -9,3 +9,4 @@ dist/
 /nbproject/private/
 /nbproject/
 .v8flags*
+npm-debug.log

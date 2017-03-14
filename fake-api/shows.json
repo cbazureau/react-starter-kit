@@ -1,0 +1,30 @@
+{
+	"returnCode": "SUCCESS",
+	"message": "Process successfully completed",
+	"severity": "SUCCESS",
+	"shows": [{
+    "id": "1370",
+    "title": "Marvel's Jessica Jones",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/31/77884.jpg"
+  },{
+    "id": "2174",
+    "title": "Marvel's Luke Cage",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/70/175470.jpg"
+  },{
+    "id": "2175",
+    "title": "Marvel's Iron Fist",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/100/250123.jpg"
+  },{
+    "id": "1369",
+    "title": "Marvel's Daredevil",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/48/122498.jpg"
+  },{
+    "id": "16544",
+    "title": "Marvel's The Punisher",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/55/138890.jpg"
+  },{
+    "id": "180",
+    "title": "Firefly",
+    "image": "http://static.tvmaze.com/uploads/images/medium_portrait/1/2600.jpg"
+  }]
+}

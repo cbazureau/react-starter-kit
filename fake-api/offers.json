@@ -5,18 +5,22 @@
 	"data": [{
     "label": "Offre 1",
     "id": "OFR123",
+    "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut mauris nec risus maximus semper. Pellentesque tempor laoreet lacus, sed tincidunt enim auctor a. Donec vitae quam vel tortor viverra aliquam. Suspendisse eu blandit nibh. Quisque dignissim nec magna at vehicula. Sed sit amet rhoncus odio. Suspendisse eu eleifend lacus."
   },{
     "label": "Offre 2",
     "id": "OFR343",
+    "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut mauris nec risus maximus semper. Pellentesque tempor laoreet lacus, sed tincidunt enim auctor a. Donec vitae quam vel tortor viverra aliquam. Suspendisse eu blandit nibh. Quisque dignissim nec magna at vehicula. Sed sit amet rhoncus odio. Suspendisse eu eleifend lacus."
   },{
     "label": "Offre 3",
     "id": "OFR534",
+    "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut mauris nec risus maximus semper. Pellentesque tempor laoreet lacus, sed tincidunt enim auctor a. Donec vitae quam vel tortor viverra aliquam. Suspendisse eu blandit nibh. Quisque dignissim nec magna at vehicula. Sed sit amet rhoncus odio. Suspendisse eu eleifend lacus."
   },{
     "label": "Offre 4",
     "id": "OFR893",
+    "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut mauris nec risus maximus semper. Pellentesque tempor laoreet lacus, sed tincidunt enim auctor a. Donec vitae quam vel tortor viverra aliquam. Suspendisse eu blandit nibh. Quisque dignissim nec magna at vehicula. Sed sit amet rhoncus odio. Suspendisse eu eleifend lacus."
   }]
 }

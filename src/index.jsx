@@ -3,12 +3,12 @@ import { Provider } from 'react-redux'
 import { render } from 'react-dom'
 import { createStore, combineReducers } from 'redux'
 import Router from './router'
-import subscription from './reducers/subscription'
+import tvshows from './reducers/tvshows'
 import './main.scss'
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(combineReducers({
-  subscription
+  tvshows
 }),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )

@@ -1,0 +1,19 @@
+@import '../../constants.scss';
+
+.show {
+  .show-img {
+    float:left;
+    width: 18rem;
+    img {width:18rem}
+  }
+  .show-desc {
+    float:right;
+    width: calc(100% - 200px);
+  }
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+

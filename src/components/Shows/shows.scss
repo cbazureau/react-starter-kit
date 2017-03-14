@@ -1,0 +1,19 @@
+@import '../../constants.scss';
+
+.shows {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .shows-item {
+    margin-bottom: 2rem;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      width:20rem;
+    }
+  }
+}

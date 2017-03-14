@@ -10,6 +10,7 @@ var config = {
   devtool: 'source-map',
   output: {
     path: BUILD_DIR,
+    publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: PROD ? [
