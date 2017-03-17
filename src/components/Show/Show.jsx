@@ -1,5 +1,6 @@
 import React from 'react'
 import './show.scss'
+import Loader from '../../components/Loader/Loader'
 
 const Show = ({ show }) => (show ?
   <div className="show">
@@ -8,7 +9,7 @@ const Show = ({ show }) => (show ?
       <img src={show.image.medium} alt={`Poster ${show.name}`} />
     </div>
     <div className="show-desc" dangerouslySetInnerHTML={{ __html: show.summary }} />
-  </div> : <div />
+  </div> : <Loader />
 )
 
 Show.propTypes = {

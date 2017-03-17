@@ -1,5 +1,6 @@
 import React from 'react'
 import './episodes.scss'
+import Loader from '../../components/Loader/Loader'
 
 const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
   <div className="episodes">
@@ -26,7 +27,7 @@ const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
         </For>
       </tbody>
     </table>
-  </div> : <div />
+  </div> : (episodes ? <div /> : <Loader />)
 )
 
 Episodes.propTypes = {

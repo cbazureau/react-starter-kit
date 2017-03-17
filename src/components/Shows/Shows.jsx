@@ -1,5 +1,6 @@
 import React from 'react'
 import './shows.scss'
+import Loader from '../../components/Loader/Loader'
 
 const Shows = ({ shows, onClickShow }) => ((shows && shows.length > 0) ?
   <div className="shows">
@@ -8,7 +9,7 @@ const Shows = ({ shows, onClickShow }) => ((shows && shows.length > 0) ?
         <a onClick={() => onClickShow(show.id)}><img src={show.image} alt={show.title} /></a>
       </span>
     </For>
-  </div> : <div />
+  </div> : <Loader />
 )
 
 Shows.propTypes = {
