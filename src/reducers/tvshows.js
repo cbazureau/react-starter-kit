@@ -1,4 +1,4 @@
-import { GET_SHOW_LIST, GET_SHOW_INFOS, GET_SHOW_EPISODES } from '../actions/tvshows'
+import { GET_SHOW_LIST, GET_SHOW_INFOS, GET_SHOW_EPISODES, RESET_SHOW } from '../actions/tvshows'
 
 const initialState = {
   episodes: [],
@@ -36,6 +36,18 @@ export default (state = initialState, action) => {
         return {
           ...state,
           episodes: action.episodes
+        }
+      }
+      return {
+        ...initialState,
+        error: 'ERR_NO_SHOW'
+      }
+    case RESET_SHOW:
+      if (action.episodes) {
+        return {
+          ...state,
+          episodes: [],
+          showInfos: null
         }
       }
       return {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import { chooseShow, getepisodes } from '../../../actions/tvshows'
+import { chooseShow, getepisodes, resetShow } from '../../../actions/tvshows'
 import Header from '../../../components/Header/Header'
 import Show from '../../../components/Show/Show'
 import Episodes from '../../../components/Episodes/Episodes'
@@ -9,15 +9,9 @@ import Episodes from '../../../components/Episodes/Episodes'
 class StepShow extends React.Component {
 
   componentWillMount() {
+    resetShow(this.props.dispatch)
     chooseShow(this.props.dispatch, this.props.params.showId)
     getepisodes(this.props.dispatch, this.props.params.showId)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.params.showId !== this.props.params.showId) {
-      chooseShow(this.props.dispatch, this.props.params.showId)
-      getepisodes(this.props.dispatch, this.props.params.showId)
-    }
   }
 
   onBack() {

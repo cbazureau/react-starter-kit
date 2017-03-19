@@ -3,6 +3,7 @@ import 'whatwg-fetch'
 export const GET_SHOW_LIST = 'GET_SHOW_LIST'
 export const GET_SHOW_INFOS = 'GET_SHOW_INFOS'
 export const GET_SHOW_EPISODES = 'GET_SHOW_EPISODES'
+export const RESET_SHOW = 'RESET_SHOW'
 export const TECHNICAL_ERROR = 'TECHNICAL_ERROR'
 export const STEP_BACK = 'STEP_BACK'
 
@@ -25,6 +26,11 @@ export function getShowList(dispatch) {
     }))
 }
 
+export function resetShow(dispatch) {
+  dispatch({
+    type: RESET_SHOW
+  })
+}
 
 export function chooseShow(dispatch, showId) {
   return fetch(`${TV_MAZE_API}/shows/${showId}`, {
