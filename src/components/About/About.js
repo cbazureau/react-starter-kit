@@ -1,6 +1,6 @@
-import React from 'react'
-import Header from '../../components/Header/Header'
-import Timer from '../../components/Timer/Timer'
+import React from 'react';
+import Header from '../../components/Header/Header';
+import Timer from '../../components/Timer/Timer';
 
 export default function About() {
   return (
@@ -11,5 +11,5 @@ export default function About() {
         <Timer />
       </div>
     </div>
-  )
+  );
 }

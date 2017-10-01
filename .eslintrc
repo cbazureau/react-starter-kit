@@ -1,7 +1,6 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "jsx-control-statements",
     "jest"
   ],
   "env": {
@@ -10,20 +9,12 @@
     "jest/globals": true
   },
   "extends": [
-    "airbnb",
-    "plugin:jsx-control-statements/recommended"
+    "airbnb"
   ],
   "rules": {
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
-    "semi": [
-      "error",
-      "never"
-    ],
-    "comma-dangle": [
-      "error",
-      "never"
-    ]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
 }

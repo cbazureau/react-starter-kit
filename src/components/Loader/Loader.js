@@ -1,5 +1,5 @@
-import React from 'react'
-import './loader.scss'
+import React from 'react';
+import './loader.scss';
 
 const Loader = () => (
   <div className="loader">
@@ -9,10 +9,10 @@ const Loader = () => (
       <span id="bubblingG_3" />
     </div>
   </div>
-)
+);
 
 Loader.propTypes = {
-  message: React.PropTypes.string
-}
+  message: React.PropTypes.string,
+};
 
-export default Loader
+export default Loader;

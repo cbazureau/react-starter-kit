@@ -1,6 +1,6 @@
-import React from 'react'
-import './show.scss'
-import Loader from '../../components/Loader/Loader'
+import React from 'react';
+import './show.scss';
+import Loader from '../../components/Loader/Loader';
 
 const Show = ({ show }) => (show ?
   <div className="show">
@@ -10,7 +10,7 @@ const Show = ({ show }) => (show ?
     </div>
     <div className="show-desc" dangerouslySetInnerHTML={{ __html: show.summary }} />
   </div> : <Loader />
-)
+);
 
 Show.propTypes = {
   show: React.PropTypes.shape({
@@ -18,9 +18,9 @@ Show.propTypes = {
     name: React.PropTypes.string.isRequired,
     summary: React.PropTypes.string.isRequired,
     image: React.PropTypes.shape({
-      medium: React.PropTypes.string.isRequired
-    })
-  })
-}
+      medium: React.PropTypes.string.isRequired,
+    }),
+  }),
+};
 
-export default Show
+export default Show;

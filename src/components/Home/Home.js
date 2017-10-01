@@ -1,5 +1,5 @@
-import React from 'react'
-import Header from '../../components/Header/Header'
+import React from 'react';
+import Header from '../../components/Header/Header';
 
 export default function Home() {
   return (
@@ -18,5 +18,5 @@ export default function Home() {
           pretium libero.</p>
       </div>
     </div>
-  )
+  );
 }

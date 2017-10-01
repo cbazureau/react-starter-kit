@@ -1,6 +1,6 @@
-import React from 'react'
-import './episodes.scss'
-import Loader from '../../components/Loader/Loader'
+import React from 'react';
+import './episodes.scss';
+import Loader from '../../components/Loader/Loader';
 
 const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
   <div className="episodes">
@@ -16,7 +16,7 @@ const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
         </tr>
       </thead>
       <tbody>
-        <For each="episode" of={episodes}>
+        {episodes.map(episode => (
           <tr key={episode.id}>
             <td>{episode.image ? <img src={episode.image.medium} /> : ''}</td>
             <td>{episode.name}</td>
@@ -24,11 +24,11 @@ const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
             <td>{episode.number}</td>
             <td>{episode.airdate}</td>
           </tr>
-        </For>
+        ))}
       </tbody>
     </table>
   </div> : (episodes ? <div /> : <Loader />)
-)
+);
 
 Episodes.propTypes = {
   episodes: React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -38,9 +38,9 @@ Episodes.propTypes = {
     number: React.PropTypes.number.isRequired,
     airdate: React.PropTypes.string.isRequired,
     image: React.PropTypes.shape({
-      medium: React.PropTypes.string
-    })
-  }))
-}
+      medium: React.PropTypes.string,
+    }),
+  })),
+};
 
-export default Episodes
+export default Episodes;

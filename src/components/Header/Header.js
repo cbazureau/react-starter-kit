@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link, IndexLink } from 'react-router'
-import './header.scss'
+import React from 'react';
+import { Link, IndexLink } from 'react-router';
+import './header.scss';
 
 const Header = () => (
   <header>
@@ -14,6 +14,6 @@ const Header = () => (
       <p><span className="icon-user" /> <span className="secure-text">Steve Jobs</span></p>
     </div>
   </header>
-)
+);
 
-export default Header
+export default Header;

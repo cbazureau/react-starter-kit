@@ -6,7 +6,7 @@ var BUILD_DIR = path.resolve(__dirname, 'dist/');
 var APP_DIR = path.resolve(__dirname, 'src/');
 
 var config = {
-  entry: ['whatwg-fetch', APP_DIR + '/index.jsx'],
+  entry: ['whatwg-fetch', APP_DIR + '/index.js'],
   devtool: 'source-map',
   output: {
     path: BUILD_DIR,
