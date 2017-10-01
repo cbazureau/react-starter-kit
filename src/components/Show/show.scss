@@ -1,12 +1,12 @@
 @import '../../constants.scss';
 
-.show {
-  .show-img {
+.Show {
+  .Show__img {
     float:left;
     width: 18rem;
     img {width:18rem}
   }
-  .show-desc {
+  .Show__desc {
     float:right;
     width: calc(100% - 200px);
   }

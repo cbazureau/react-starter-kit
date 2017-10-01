@@ -1,14 +1,16 @@
 import React from 'react';
-import './show.scss';
+import './Show.scss';
 import Loader from '../../components/Loader/Loader';
 
 const Show = ({ show }) => (show ?
-  <div className="show">
-    <h1 className="show-name">{show.name}</h1>
-    <div className="show-img">
+  <div className="Show">
+    <h1 className="Show__name">{show.name}</h1>
+    <div className="Show__img">
       <img src={show.image.medium} alt={`Poster ${show.name}`} />
     </div>
-    <div className="show-desc" dangerouslySetInnerHTML={{ __html: show.summary }} />
+    <div className="Show__desc">
+      <p>{show.summary.replace(/(<([^>]+)>)/ig, '')}</p>
+    </div>
   </div> : <Loader />
 );
 

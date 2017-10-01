@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show should render correctly 1`] = `
+<div
+  className="Show"
+>
+  <h1
+    className="Show__name"
+  >
+    Test Name
+  </h1>
+  <div
+    className="Show__img"
+  >
+    <img
+      alt="Poster Test Name"
+      src="http://img"
+    />
+  </div>
+  <div
+    className="Show__desc"
+  >
+    <p>
+      Lorem ipsum
+    </p>
+  </div>
+</div>
+`;

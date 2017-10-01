@@ -1,7 +1,7 @@
 import tvshows from '../reducers/tvshows';
 import { GET_SHOW_LIST, GET_SHOW_INFOS, GET_SHOW_EPISODES } from '../actions/tvshows';
 
-describe('todos tvshows', () => {
+describe('tvshows', () => {
   it('should return the initial state', () => {
     expect(
       tvshows(undefined, {}),
