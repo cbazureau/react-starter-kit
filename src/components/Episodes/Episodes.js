@@ -18,7 +18,7 @@ const Episodes = ({ episodes }) => ((episodes && episodes.length > 0) ?
       <tbody>
         {episodes.map(episode => (
           <tr key={episode.id}>
-            <td>{episode.image ? <img src={episode.image.medium} /> : ''}</td>
+            <td>{episode.image ? <img src={episode.image.medium} alt={episode.name} /> : ''}</td>
             <td>{episode.name}</td>
             <td>{episode.season}</td>
             <td>{episode.number}</td>
